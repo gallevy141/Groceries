@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+Groceries Hooks Project Plan:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1)	Project Setup:
+Set up a new React project using create-react-app.
+Install the necessary things (Bootstrap, etc.).
+Create a Repository on GitHub:
 
-## Available Scripts
+2)	Create a new repository on GitHub.
+Push my initial project setup to this repository.
 
-In the project directory, you can run:
+3)	Component Structure:
+App - the main application component.
+Header - component for the header.
+Footer - component for the footer.
+GroceryList - component for the list of grocery items.
+ShoppingList - component for the list of shopping items.
+OrderSummary - component for the order summary.
+GroceryItem - component for an individual grocery item.
+ShoppingItem - component for an individual shopping item.
+Receipt - component for the receipt view.
 
-### `npm start`
+4)	Bootstrap Styling:
+Apply Bootstrap styles to the components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5)	State Management:
+Implement state using the useState and useEffect hooks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6)	Complete Functionality:
+Add functionality to the components such as adding to cart, viewing the cart, and placing an order.
 
-### `npm test`
+Implementation: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1)	Project Setup:
+Use create-react-app to create a new React application: npx create-react-app groceries.
+Install Bootstrap in the project: npm install bootstrap.
 
-### `npm run build`
+2)	Create a Repository on GitHub:
+Go to GitHub and create a new repository.
+Connect my local project to the new GitHub repository and push my initial setup.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3)	Component Structure:
+Begin creating the necessary components in their respective files (e.g., Header.js, Footer.js, GroceryList.js, etc.).
+Start building out the structure of these components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4)	Bootstrap Styling:
+Start applying Bootstrap styles to the components. Can import Bootstrap in my index.js file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5)	State Management:
+Implement state management using the useState and useEffect hooks. The groceries and shopping states will likely be managed in the App component.
 
-### `npm run eject`
+6)	Complete Functionality:
+Implement the functionality for my components. This will likely involve passing state and functions as props to child components and using the useState hook to manage state in these components.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
