@@ -23,24 +23,26 @@ const App = () => {
   const [shopping, setShopping] = useState([])
 
   const handleGroceryClick = (item) => {
-    const updatedGroceries = groceries.map((grocery) =>
-      grocery.name === item.name
-        ? { ...grocery, quantity: grocery.quantity - 1 }
-        : grocery
-    )
-
-    const updatedShopping = shopping.map((shopItem) =>
-      shopItem.groceryItem.name === item.name
-        ? { ...shopItem, quantity: shopItem.quantity + 1 }
-        : shopItem
-    )
-    
-    if (!updatedShopping.find((i) => i.groceryItem.name === item.name)) {
-      updatedShopping.push({ groceryItem: item, quantity: 1 })
+    if (item.quantity > 0) {
+      const updatedGroceries = groceries.map((grocery) =>
+        grocery.name === item.name
+          ? { ...grocery, quantity: grocery.quantity - 1 }
+          : grocery
+      )
+  
+      const updatedShopping = shopping.map((shopItem) =>
+        shopItem.groceryItem.name === item.name
+          ? { ...shopItem, quantity: shopItem.quantity + 1 }
+          : shopItem
+      )
+  
+      if (!updatedShopping.find((i) => i.groceryItem.name === item.name)) {
+        updatedShopping.push({ groceryItem: item, quantity: 1 })
+      }
+  
+      setGroceries(updatedGroceries)
+      setShopping(updatedShopping)
     }
-
-    setGroceries(updatedGroceries)
-    setShopping(updatedShopping)
   }
 
   const handleRemoveItem = (itemToRemove) => {
