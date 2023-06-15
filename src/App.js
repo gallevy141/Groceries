@@ -44,14 +44,20 @@ const App = () => {
   }
 
   const handleRemoveItem = (itemToRemove) => {
-    const updatedShopping = shopping.filter(item => item.groceryItem.name !== itemToRemove.groceryItem.name);
-
+    const updatedShopping = shopping
+      .map(item =>
+        item.groceryItem.name === itemToRemove.groceryItem.name
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+      .filter(item => item.quantity > 0)
+  
     const updatedGroceries = groceries.map(grocery =>
       grocery.name === itemToRemove.groceryItem.name
-        ? { ...grocery, quantity: grocery.quantity + itemToRemove.quantity }
+        ? { ...grocery, quantity: grocery.quantity + 1 }
         : grocery
     )
-
+  
     setShopping(updatedShopping)
     setGroceries(updatedGroceries)
   }
