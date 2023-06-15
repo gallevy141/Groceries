@@ -1,10 +1,16 @@
 import React from "react"
 
 const GroceryItem = ({ item, onGroceryClick }) => {
+  const handleClick = () => {
+    if (onGroceryClick) {
+      onGroceryClick(item);
+    }
+  }
+  
   return (
     <li
       className={item.quantity === 0 ? "out-of-stock" : ""}
-      onClick={() => onGroceryClick(item)}
+      onClick={handleClick}
     >
       <img src={item.thumbnail} alt={item.name} />
       <span>
