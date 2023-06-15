@@ -60,6 +60,7 @@ const App = () => {
     <div className="App container">
       <Header />
       <GroceryList groceries={groceries} onGroceryItemClick={handleGroceryClick} />      <OrderSummary shopping={shopping} />
+      <OrderSummary shopping={shopping} />
       <ShoppingList shopping={shopping} onRemoveItem={handleRemoveItem} />
       <Receipt shopping={shopping} />
       <Footer />
