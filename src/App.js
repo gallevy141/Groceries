@@ -43,12 +43,25 @@ const App = () => {
     setShopping(updatedShopping)
   }
 
+  const handleRemoveItem = (itemToRemove) => {
+    const updatedShopping = shopping.filter(item => item.groceryItem.name !== itemToRemove.groceryItem.name);
+
+    const updatedGroceries = groceries.map(grocery =>
+      grocery.name === itemToRemove.groceryItem.name
+        ? { ...grocery, quantity: grocery.quantity + itemToRemove.quantity }
+        : grocery
+    )
+
+    setShopping(updatedShopping)
+    setGroceries(updatedGroceries)
+  }
+
   return (
     <div className="App container">
       <Header />
       <GroceryList groceries={groceries} onGroceryClick={handleGroceryClick} />
       <OrderSummary shopping={shopping} />
-      <ShoppingList shopping={shopping} />
+      <ShoppingList shopping={shopping} onRemoveItem={handleRemoveItem} />
       <Receipt shopping={shopping} />
       <Footer />
     </div>
