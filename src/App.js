@@ -7,8 +7,6 @@ import GroceryList from './components/GroceryList'
 import OrderSummary from './components/OrderSummary'
 import ShoppingList from './components/ShoppingList'
 import Receipt from './components/Receipt'
-import GroceryItem from './components/GroceryItem'
-import ShoppingItem from './components/ShoppingItem'
 
 const App = () => {
   const initialGroceries = [
