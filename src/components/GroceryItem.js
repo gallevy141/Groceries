@@ -13,4 +13,4 @@ const GroceryItem = ({ item, onGroceryItemClick }) => {
   )
 }
 
-export default GroceryIte
+export default GroceryItem
