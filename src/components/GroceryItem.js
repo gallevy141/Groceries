@@ -8,6 +8,8 @@ const GroceryItem = ({ item, onGroceryItemClick }) => {
   return (
     <div>
       <p>{item.name} - ${item.price.toFixed(2)}</p>
+      <p>Quantity: {item.quantity}</p>
+      <img src={item.thumbnail} alt={item.name} />
       <button onClick={() => onGroceryItemClick(item)}>Add to cart</button>
     </div>
   )
