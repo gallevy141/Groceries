@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React, { useState } from 'react';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
