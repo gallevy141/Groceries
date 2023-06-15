@@ -59,8 +59,7 @@ const App = () => {
   return (
     <div className="App container">
       <Header />
-      <GroceryList groceries={groceries} onGroceryClick={handleGroceryClick} />
-      <OrderSummary shopping={shopping} />
+      <GroceryList groceries={groceries} onGroceryItemClick={handleGroceryClick} />      <OrderSummary shopping={shopping} />
       <ShoppingList shopping={shopping} onRemoveItem={handleRemoveItem} />
       <Receipt shopping={shopping} />
       <Footer />
