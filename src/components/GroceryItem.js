@@ -1,22 +1,15 @@
 import React from "react"
 
-const GroceryItem = ({ item, onGroceryClick }) => {
-  const handleClick = () => {
-    if (onGroceryClick) {
-      onGroceryClick(item.groceryItem)
-    }
+const GroceryItem = ({ item, onGroceryItemClick }) => {
+  if (!item || item.price === undefined) {
+    return <div>Error: Item not available</div>
   }
 
   return (
-    <li
-      className={item.groceryItem.quantity === 0 ? "out-of-stock" : ""}
-      onClick={handleClick}
-    >
-      <img src={item.groceryItem.thumbnail} alt={item.groceryItem.name} />
-      <span>
-        {item.groceryItem.name} - ${item.groceryItem.price.toFixed(2)} (x{item.quantity})
-      </span>
-    </li>
+    <div>
+      <p>{item.name} - ${item.price.toFixed(2)}</p>
+      <button onClick={() => onGroceryItemClick(item)}>Add to cart</button>
+    </div>
   )
 }
 
