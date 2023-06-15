@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from './Header'
-import Footer from './Footer'
-import GroceryList from './GroceryList'
-import OrderSummary from './OrderSummary'
-import ShoppingList from './ShoppingList'
-import Receipt from './Receipt'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import GroceryList from './components/GroceryList'
+import OrderSummary from './components/OrderSummary'
+import ShoppingList from './components/ShoppingList'
+import Receipt from './components/Receipt'
 
 const App = () => {
   const initialGroceries = [
