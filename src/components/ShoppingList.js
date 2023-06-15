@@ -1,13 +1,13 @@
 import React from "react"
-import GroceryItem from "./GroceryItem"
+import ShoppingItem from "./ShoppingItem"
 
-const ShoppingList = ({ shopping }) => {
+const ShoppingList = ({ shopping, onRemoveItem }) => {
   return (
     <div className="shopping-list">
       <h2>Shopping List</h2>
       <ul>
         {shopping.map((item, index) => (
-          <GroceryItem key={index} item={item} />
+          <ShoppingItem key={index} item={item} onShoppingItemClick={onRemoveItem} />
         ))}
       </ul>
     </div>
